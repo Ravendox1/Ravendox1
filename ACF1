@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Criteria Form</title>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #005f99;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .category-box {
+            border: 2px solid #005f99;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-box h2 {
+            margin-top: 0;
+            color: #005f99;
+            font-size: 1.5em;
+        }
+
+        .category-box ol {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .input-box {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .input-section {
+            margin-bottom: 15px;
+        }
+
+        .input-section label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-section input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #005f99;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #004270;
+        }
+
+        /* Responsive design for mobile devices */
+        @media (max-width: 768px) {
+            .input-section input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Admission Criteria Form</h1>
+
+    <!-- Input Form for Admission Criteria -->
+    <div class="input-box">
+        <div class="input-section">
+            <label for="chestXray">Chest X-ray findings:</label>
+            <input type="text" id="chestXray" placeholder="Enter Chest X-ray findings">
+        </div>
+        <div class="input-section">
+            <label for="ctScan">CT scan findings:</label>
+            <input type="text" id="ctScan" placeholder="Enter CT scan findings">
+        </div>
+        <div class="input-section">
+            <label for="mriResults">MRI results:</label>
+            <input type="text" id="mriResults" placeholder="Enter MRI results">
+        </div>
+        <div class="input-section">
+            <label for="ultrasound">Ultrasound findings:</label>
+            <input type="text" id="ultrasound" placeholder="Enter Ultrasound findings">
+        </div>
+        <div class="input-section">
+            <label for="echocardiogram">Echocardiogram results:</label>
+            <input type="text" id="echocardiogram" placeholder="Enter Echocardiogram results">
+        </div>
+        <div class="input-section">
+            <label for="xraySpecific">X-ray of specific areas:</label>
+            <input type="text" id="xraySpecific" placeholder="Enter X-ray of specific areas">
+        </div>
+        <div class="input-section">
+            <label for="radiologyReports">Other radiology or imaging reports:</label>
+            <input type="text" id="radiologyReports" placeholder="Enter other radiology reports">
+        </div>
+        <div class="input-section">
+            <label for="ivFluids">IV fluids administered:</label>
+            <input type="text" id="ivFluids" placeholder="Enter IV fluids administered">
+        </div>
+        <div class="input-section">
+            <label for="medicationsAdministered">Medications administered:</label>
+            <input type="text" id="medicationsAdministered" placeholder="Enter medications administered">
+        </div>
+        <div class="input-section">
+            <label for="oxygenTherapy">Oxygen therapy:</label>
+            <input type="text" id="oxygenTherapy" placeholder="Enter oxygen therapy details">
+        </div>
+        <div class="input-section">
+            <label for="proceduresPerformed">Procedures performed:</label>
+            <input type="text" id="proceduresPerformed" placeholder="Enter procedures performed">
+        </div>
+        <div class="input-section">
+            <label for="bloodTransfusion">Blood transfusion (if applicable):</label>
+            <input type="text" id="bloodTransfusion" placeholder="Enter blood transfusion details">
+        </div>
+        <div class="input-section">
+            <label for="anticipatedMedications">Anticipated medications:</label>
+            <input type="text" id="anticipatedMedications" placeholder="Enter anticipated medications">
+        </div>
+        <div class="input-section">
+            <label for="plannedImaging">Planned imaging:</label>
+            <input type="text" id="plannedImaging" placeholder="Enter planned imaging">
+        </div>
+        <div class="input-section">
+            <label for="physicalTherapy">Physical therapy anticipated:</label>
+            <input type="text" id="physicalTherapy" placeholder="Enter physical therapy anticipated">
+        </div>
+        <button onclick="populateCategories()">Submit</button>
+    </div>
+
+    <!-- Category 4: Imaging Findings -->
+    <div class="category-box">
+        <h2>Category 4: Imaging findings at admission_criteria_form</h2>
+        <ol>
+            <li id="imaging1">Chest X-ray findings: </li>
+            <li id="imaging2">CT scan findings: </li>
+            <li id="imaging3">MRI results: </li>
+            <li id="imaging4">Ultrasound findings: </li>
+            <li id="imaging5">Echocardiogram results: </li>
+            <li id="imaging6">X-ray of specific areas: </li>
+            <li id="imaging7">Any other radiology or imaging reports: </li>
+        </ol>
+    </div>
+
+    <!-- Category 5: Therapeutics Initiated -->
+    <div class="category-box">
+        <h2>Category 5: Therapeutics initiated at admission_criteria_form</h2>
+        <ol>
+            <li id="therapeutics1">Intravenous (IV) fluids administered: </li>
+            <li id="therapeutics2">Medications administered: </li>
+            <li id="therapeutics3">Oxygen therapy: </li>
+            <li id="therapeutics4">Procedures performed: </li>
+            <li id="therapeutics5">Blood transfusion (if applicable): </li>
+        </ol>
+    </div>
+
+    <!-- Category 6: Anticipated Therapeutics -->
+    <div class="category-box">
+        <h2>Category 6: Anticipated therapeutics at admission_criteria_form</h2>
+        <ol>
+            <li id="anticipated1">Anticipated medications: </li>
+            <li id="anticipated2">Planned imaging: </li>
+            <li id="anticipated3">Physical therapy anticipated: </li>
+        </ol>
+    </div>
+
+    <script>
+        // JavaScript function to populate the categories based on input values
+        function populateCategories() {
+            // Get input values for imaging findings
+            document.getElementById('imaging1').innerText = 'Chest X-ray findings: ' + document.getElementById('chestXray').value;
+            document.getElementById('imaging2').innerText = 'CT scan findings: ' + document.getElementById('ctScan').value;
+            document.getElementById('imaging
 
